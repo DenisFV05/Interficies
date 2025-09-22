@@ -7,7 +7,6 @@ import javafx.event.ActionEvent;
 
 public class Controller {
 
-    //Botones
     @FXML
     private Button buttonEquals;
 
@@ -25,11 +24,11 @@ public class Controller {
 
     @FXML
     private TextField pantalla;
-    //Variables para la pantalla
-    private double num1;
-    private String operador="";
 
-    //Botones de accion
+    //Variables para la pantalla
+    private double num1; // Primer numero en la operacion
+    private String operador=""; 
+
 
     @FXML
     private void operar(ActionEvent event) {
@@ -43,7 +42,7 @@ public class Controller {
             num1 = Double.parseDouble(pantalla.getText()); // Pilla texto de la pantalla de la calculadora
             operador = op;
             pantalla.clear();  // Limpiar para escribir el segundo número
-        } catch (NumberFormatException e) { // Si falla para darme cuenta
+        } catch (NumberFormatException e) { // Si falla algo o lo que se introduce no es un numero
             pantalla.setText("Error");
         }
     }
