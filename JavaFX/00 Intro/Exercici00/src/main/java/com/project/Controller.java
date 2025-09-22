@@ -31,7 +31,7 @@ public class Controller {
 
 
     @FXML
-    private void operar(ActionEvent event) {
+    private void operar(ActionEvent event) { //Al hacer click en los primeros botones
         Button btn = (Button) event.getSource();
         prepararOperacion(btn.getText());
     }
