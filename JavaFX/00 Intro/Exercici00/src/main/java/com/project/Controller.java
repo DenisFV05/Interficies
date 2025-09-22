@@ -9,7 +9,7 @@ public class Controller {
 
     //Botones
     @FXML
-    private Button buttonAdd;
+    private Button buttonEquals;
 
     @FXML
     private Button suma;
@@ -32,28 +32,11 @@ public class Controller {
     //Botones de accion
 
     @FXML
-    private void suma(ActionEvent event) {
-        prepararOperacion("+");
-        
+    private void operar(ActionEvent event) {
+        Button btn = (Button) event.getSource();
+        prepararOperacion(btn.getText());
     }
 
-    @FXML
-    private void resta(ActionEvent event) {
-        prepararOperacion("-");
-        
-    }
-
-    @FXML
-    private void multi(ActionEvent event) {
-        prepararOperacion("*");
-        
-    }
-
-    @FXML
-    private void divi(ActionEvent event) {
-        prepararOperacion("/");
-        
-    }
 
     private void prepararOperacion(String op) { //Esta funcion se ejecuta cuando hay que cambiar de num1 a num2
         try {
